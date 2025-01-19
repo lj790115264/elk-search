@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Curl & Script Runner",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png"
+    }
+  },
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"]
+}
