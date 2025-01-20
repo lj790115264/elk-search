@@ -8,6 +8,5 @@
       "16": "icon16.png"
     }
   },
-  "permissions": ["scripting", "activeTab"],
-  "host_permissions": ["<all_urls>"]
+  "permissions": ["scripting", "activeTab", "tabs", "downloads"]
 }

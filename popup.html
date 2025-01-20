@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CURL to Fetch Converter</title>
+  <meta charset="UTF-8">
+  <title>ELK Search</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <textarea id="curl-input" placeholder="Paste your curl command here..."></textarea>
+    <h1>ELK Search</h1>
+    
+    <div class="form-group">
+      <label for="curl-input">CURL Command:</label>
+      <textarea id="curl-input" placeholder="Enter curl command..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="parsed-url">请求的ELK地址URL:</label>
+      <input type="text" id="parsed-url" readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="max-iterations">最大翻页次数:</label>
+      <input type="number" id="max-iterations" value="10">
+    </div>
+
+    <div class="form-group">
+      <label for="page-size">Page Size:</label>
+      <input type="number" id="page-size" value="50">
+    </div>
+
+    <div class="form-group">
+      <label for="custom-processor">正则表达式:</label>
+      <textarea id="custom-processor"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="result-url">可以把数据(List<String>) POST发送到指定的地址再处理一遍</label>
+      <input type="text" id="result-url">
+    </div>
+
+    <div class="form-group" id="save-file-group">
+      <input type="checkbox" id="save-file">
+      <label for="save-file">是否保存文件</label>
+    </div>
+
     <button id="convert-btn">Convert & Execute</button>
+    
     <div id="output"></div>
+    <button id="copy-btn" class="copy-btn">复制内容</button>
   </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
